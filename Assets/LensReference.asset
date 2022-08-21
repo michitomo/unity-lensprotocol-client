@@ -264,6 +264,123 @@ MonoBehaviour:
         type: PaginatedResultInfo
       hasChanged: 0
     isComplete: 1
-  mutations: []
+  - name: getChallenge
+    type: 0
+    query: "query getChallenge{\n    challenge(  request :{ address :\"0x179974a3f72464949e0269af45cac14fa14daf4b\"}
+      ){\n        text\n    }\n}"
+    queryString: challenge
+    returnType: AuthChallengeResult
+    queryOptions:
+    - challenge
+    - verify
+    - txIdToTxHash
+    - explorePublications
+    - exploreProfiles
+    - pendingApprovalFollows
+    - doesFollow
+    - following
+    - followers
+    - followerNftOwnedTokenIds
+    - ping
+    - hasTxHashBeenIndexed
+    - enabledModuleCurrencies
+    - approvedModuleAllowanceAmount
+    - generateModuleCurrencyApprovalData
+    - profileFollowModuleBeenRedeemed
+    - enabledModules
+    - nfts
+    - nftOwnershipChallenge
+    - notifications
+    - profiles
+    - profile
+    - recommendedProfiles
+    - defaultProfile
+    - globalProtocolStats
+    - publications
+    - publication
+    - whoCollectedPublication
+    - profilePublicationsForSale
+    - allPublicationsTags
+    - search
+    - timeline
+    - userSigNonces
+    - claimableHandles
+    - claimableStatus
+    - profileOnChainIdentity
+    - profilePublicationRevenue
+    - publicationRevenue
+    - profileFollowRevenue
+    - rel
+    fields:
+    - index: 0
+      name: text
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: text
+        type: String
+      hasChanged: 0
+    isComplete: 1
+  mutations:
+  - name: authenticate
+    type: 1
+    query: "mutation authenticate{\n    authenticate{\n        accessToken\n       
+      refreshToken\n    }\n}"
+    queryString: authenticate
+    returnType: AuthenticationResult
+    queryOptions:
+    - authenticate
+    - refresh
+    - broadcast
+    - createSetDispatcherTypedData
+    - createFollowTypedData
+    - createUnfollowTypedData
+    - createSetFollowModuleTypedData
+    - createSetFollowNFTUriTypedData
+    - createToggleFollowTypedData
+    - createCollectTypedData
+    - createSetDefaultProfileTypedData
+    - createSetProfileImageURITypedData
+    - createSetProfileImageURIViaDispatcher
+    - createBurnProfileTypedData
+    - createPostTypedData
+    - createPostViaDispatcher
+    - createCommentTypedData
+    - createCommentViaDispatcher
+    - createMirrorTypedData
+    - hidePublication
+    - createMirrorViaDispatcher
+    - claim
+    - createSetProfileMetadataTypedData
+    - createSetProfileMetadataViaDispatcher
+    - addReaction
+    - removeReaction
+    - reportPublication
+    - ach
+    fields:
+    - index: 0
+      name: accessToken
+      type: Jwt
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: accessToken
+        type: Jwt
+      - name: refreshToken
+        type: Jwt
+      hasChanged: 0
+    - index: 1
+      name: refreshToken
+      type: Jwt
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: accessToken
+        type: Jwt
+      - name: refreshToken
+        type: Jwt
+      hasChanged: 0
+    isComplete: 1
   subscriptions: []
   loading: 0
